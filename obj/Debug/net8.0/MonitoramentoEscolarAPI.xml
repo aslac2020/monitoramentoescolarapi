@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MonitoramentoEscolarAPI</name>
+    </assembly>
+    <members>
+        <member name="M:MonitoramentoEscolarAPI.Controllers.AlunoController.ListarTodosAlunos">
+            <summary>
+            Lista todos os alunos cadastrados.
+            </summary>
+            <returns>Lista de objetos AlunoModel.</returns>
+        </member>
+        <member name="M:MonitoramentoEscolarAPI.Controllers.AlunoController.BuscarAlunoPorId(System.Guid)">
+            <summary>
+            Lista aluno pelo seu cadastro Id.
+            </summary>
+            <returns>Lista de objetos AlunoModel.</returns>
+        </member>
+        <member name="M:MonitoramentoEscolarAPI.Controllers.AlunoController.CriarAluno(MonitoramentoEscolarAPI.DTOs.AlunoCreateDto)">
+            <summary>
+            Cadastrar um Aluno.
+            </summary>
+            <returns>Lista de objetos AlunoModel.</returns>
+        </member>
+        <member name="M:MonitoramentoEscolarAPI.Controllers.AlunoController.AtualizarAluno(System.Guid,MonitoramentoEscolarAPI.DTOs.AlunoUpdateDto)">
+            <summary>
+            Atualizar um Aluno.
+            </summary>
+            <returns>Lista de objetos AlunoModel.</returns>
+        </member>
+        <member name="M:MonitoramentoEscolarAPI.Controllers.AlunoController.DeletarAluno(System.Guid)">
+            <summary>
+            Deletar um Aluno.
+            </summary>
+            <returns>Lista de objetos AlunoModel.</returns>
+        </member>
+    </members>
+</doc>
