@@ -46,16 +46,6 @@ namespace MonitoramentoEscolarAPI.Controllers
             return CreatedAtAction(nameof(BuscarUsuarioPorId), new { id = result.Item3!.Id }, result);
         }
 
-        [HttpPost("login")]
-        [AllowAnonymous]
-        public async Task<IActionResult> Login([FromBody] LoginRequest request)
-        {
-            var res = await _auth.LoginAsync(request);
-            if (res == null) return Unauthorized(new { message = "Email ou senha inválidos." });
-            return Ok(res);
-
-        }
-
         [HttpPut("{id}")]
         [Authorize]
         public async Task<IActionResult> AtualizarUsuario(Guid id, [FromBody] UsuarioModel usuario)

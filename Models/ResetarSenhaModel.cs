@@ -9,14 +9,14 @@ namespace MonitoramentoEscolarAPI.Models
         [Column("id")]
         public Guid Id { get; set; } = Guid.NewGuid();
 
-        [Column("usuarioId")]
+        [Column("usuario_id")]
         public Guid UsuarioId { get; set; }
 
         [Column("token")]
         public string Token { get; set; } = null!;
 
         
-        [Column("expiraEm")]
+        [Column("expira_em")]
         public DateTime ExpiraEm { get; set; }
     }
 }

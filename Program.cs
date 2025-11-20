@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using MonitoramentoEscolarAPI.Data;
 using MonitoramentoEscolarAPI.Repository;
 using MonitoramentoEscolarAPI.Services;
+using Resend;
 using System.Reflection;
 using System.Text;
 
@@ -42,7 +44,28 @@ builder.Services.AddAuthentication(options =>
 // services
 builder.Services.AddScoped<IUsuarioRepository, UsuarioService>();
 builder.Services.AddScoped<IAlunoRepository, AlunoService>();
-builder.Services.AddScoped<IResetarSenhaRepository, ResetarSenhaService>();
+builder.Services.AddScoped<IAuthRepository, AuthService>();
+builder.Services.AddScoped<IEsqueciSenhaRepository, EsqueciSenhaService>();
+
+
+//configuracao de envio de email
+builder.Services.Configure<ResendClientOptions>(o =>
+{
+    o.ApiToken = builder.Configuration["Envio:ResendApiKey"];
+});
+
+builder.Services.AddScoped<EnviarEmailService>();
+
+
+// Registro do HttpClient + ResendClient como TypedClient
+builder.Services.AddHttpClient("Resend")
+    .AddTypedClient((httpClient, sp) =>
+    {
+        var options = sp.GetRequiredService<IOptionsSnapshot<ResendClientOptions>>();
+        return new ResendClient(options, httpClient);
+    });
+
+
 //builder.Services.AddScoped<ILocalizacaoService, LocalizacaoService>();
 
 // Add services to the container.

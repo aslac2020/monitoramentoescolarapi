@@ -5,9 +5,11 @@ C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\Monitora
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\MonitoramentoEscolarAPI.runtimeconfig.json
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\MonitoramentoEscolarAPI.dll
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\MonitoramentoEscolarAPI.pdb
+C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\MonitoramentoEscolarAPI.xml
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Humanizer.dll
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Microsoft.AspNetCore.WebUtilities.dll
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -24,10 +26,12 @@ C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\Monitora
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Microsoft.Net.Http.Headers.dll
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Npgsql.dll
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Resend.dll
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -97,6 +101,7 @@ C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\Monitora
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\obj\Debug\net8.0\MonitoramentoEscolarAPI.csproj.CoreCompileInputs.cache
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\obj\Debug\net8.0\MonitoramentoEscolarAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\obj\Debug\net8.0\MonitoramentoEscolarAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\obj\Debug\net8.0\MonitoramentoEscolarAPI.sourcelink.json
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\obj\Debug\net8.0\staticwebassets.build.json
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\obj\Debug\net8.0\staticwebassets.development.json
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\obj\Debug\net8.0\staticwebassets\msbuild.MonitoramentoEscolarAPI.Microsoft.AspNetCore.StaticWebAssets.props
@@ -108,8 +113,7 @@ C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\Monitora
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\obj\Debug\net8.0\Monitora.3F96B9B0.Up2Date
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\obj\Debug\net8.0\MonitoramentoEscolarAPI.dll
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\obj\Debug\net8.0\refint\MonitoramentoEscolarAPI.dll
+C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\obj\Debug\net8.0\MonitoramentoEscolarAPI.xml
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\obj\Debug\net8.0\MonitoramentoEscolarAPI.pdb
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\obj\Debug\net8.0\MonitoramentoEscolarAPI.genruntimeconfig.cache
 C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\obj\Debug\net8.0\ref\MonitoramentoEscolarAPI.dll
-C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\bin\Debug\net8.0\MonitoramentoEscolarAPI.xml
-C:\Projetos Pessoais\Monitoramento Escolar\Back\MonitoramentoEscolarAPI\MonitoramentoEscolarAPI\obj\Debug\net8.0\MonitoramentoEscolarAPI.xml

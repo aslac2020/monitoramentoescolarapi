@@ -2,7 +2,7 @@
 
 namespace MonitoramentoEscolarAPI.Repository
 {
-    public interface IResetarSenhaRepository
+    public interface IEsqueciSenhaRepository
     {
         Task<(bool Sucess, string Message, string token)> SolicitarSenhaNova(SolicitarSenhaRequest request);
         Task<(bool Sucess, string Message)> ResetarSenha(ResetarSenhaRequest request);
