@@ -4,7 +4,8 @@
     {
         public Guid Id { get; set;}
         public string Nome { get; set;} = null!;
-        public Guid MotoristaId { get; set;}
+        public Guid MotoristaId { get; set; }
+        public MotoristaModel? Motorista { get; set; }
         public DateTime HoraPartida { get; set;}
         public ICollection<RotaAlunoModel> RotasAlunos { get; set;} = new List<RotaAlunoModel>();
     }

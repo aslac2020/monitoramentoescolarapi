@@ -46,6 +46,7 @@ builder.Services.AddScoped<IUsuarioRepository, UsuarioService>();
 builder.Services.AddScoped<IAlunoRepository, AlunoService>();
 builder.Services.AddScoped<IAuthRepository, AuthService>();
 builder.Services.AddScoped<IEsqueciSenhaRepository, EsqueciSenhaService>();
+builder.Services.AddScoped<ITipoUsuarioRepository, TipoUsuarioService>();
 
 
 //configuracao de envio de email
@@ -81,7 +82,24 @@ builder.Services.AddSwaggerGen(c =>
     c.IncludeXmlComments(xmlPath);
 });
 
+
+// Add CORS before builder.Build()
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend",
+        policy =>
+        {
+            policy
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials()
+                .WithOrigins("http://localhost:4200");
+        });
+});
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -90,7 +108,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
 app.UseHttpsRedirection();
+
+app.UseCors("AllowFrontend");
+
 
 app.UseAuthorization();
 

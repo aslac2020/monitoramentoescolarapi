@@ -1,4 +1,5 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using MonitoramentoEscolarAPI.Data;
 using MonitoramentoEscolarAPI.DTOs;
 using MonitoramentoEscolarAPI.Repository;
@@ -25,7 +26,10 @@ namespace MonitoramentoEscolarAPI.Services
 
         public async Task<LoginResponse> LoginAsync(LoginRequest request)
         {
-            var usuario = _db.Usuarios.FirstOrDefault(u => u.Email == request.email);
+            var usuario = _db.Usuarios
+                .Include(u => u.TipoUsuario)
+                .FirstOrDefault(u => u.Email == request.email);
+
             if (usuario == null) return null;
             if (!BCrypt.Net.BCrypt.Verify(request.senha, usuario.Senha)) return null;
 
@@ -37,7 +41,7 @@ namespace MonitoramentoEscolarAPI.Services
             {
                 new Claim(JwtRegisteredClaimNames.Sub, usuario.Id.ToString()),
                 new Claim(ClaimTypes.Email, usuario.Email),
-                new Claim(ClaimTypes.Role, usuario.Tipo.ToString())
+                new Claim(ClaimTypes.Role, usuario.TipoUsuario.CodTipoUsuario),
             };
 
 
@@ -51,7 +55,7 @@ namespace MonitoramentoEscolarAPI.Services
 
 
             string tokenStr = new JwtSecurityTokenHandler().WriteToken(token);
-            return new LoginResponse(tokenStr, usuario.Nome, usuario.Email, usuario.Tipo.ToString());
+            return new LoginResponse(tokenStr, usuario.Nome, usuario.Email);
 
 
         }

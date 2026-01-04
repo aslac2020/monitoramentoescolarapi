@@ -27,8 +27,13 @@ namespace MonitoramentoEscolarAPI.Services
             return await _db.Usuarios.AsNoTracking().FirstOrDefaultAsync(u => u.Id == id);
         }
 
-      public async Task<(bool Sucess, string Message, UsuarioModel?)> CadastrarUsuario(UsuarioRequest request)
-      {
+        public async Task<UsuarioModel?> BuscarUsuarioPorEmail(string email)
+        {
+             return await _db.Usuarios.AsNoTracking().FirstOrDefaultAsync(u => u.Email == email);
+        }
+
+        public async Task<(bool Sucess, string Message, UsuarioModel?)> CadastrarUsuario(UsuarioRequest request)
+        {
             bool emailExistente = await _db.Usuarios.AnyAsync(u => u.Email == request.email);
             if (emailExistente)
                 return (false, "Email já cadastrado.", null);
@@ -40,28 +45,27 @@ namespace MonitoramentoEscolarAPI.Services
                 Nome = request.nome,
                 Email = request.email,
                 Senha = hash,
-                Tipo = request.tipo.ToUpper()
+                IdTipoUsuario = request.idTipoUsuario
+        
             };
 
             _db.Usuarios.Add(usuario);
             await _db.SaveChangesAsync();
             return (true, "Usuário cadastrado com sucesso.", usuario);
-      }
+        }
 
+     
 
-  
-        public async Task<(bool Sucess, string Message)> AtualizarUsuario(Guid id, UsuarioModel request)
+        public async Task<(bool Sucess, string Message)> AtualizarUsuario(Guid id, UsuarioUpdateRequest request)
         {
 
             var usuario = await _db.Usuarios.FindAsync(id);
-            var hash = BCrypt.Net.BCrypt.HashPassword(request.Senha);
             if (usuario == null)
              return (false, "Usuário não encontrado.");
 
-            usuario.Nome = request.Nome;
-            usuario.Email = request.Email;
-            usuario.Senha = hash;
-            usuario.Tipo = request.Tipo;
+            usuario.Nome = request.nome;
+            usuario.Email = request.email;
+            usuario.IdTipoUsuario = request.idTipoUsuario;
 
             _db.Entry(usuario).State = EntityState.Modified;
             await _db.SaveChangesAsync();
@@ -71,7 +75,6 @@ namespace MonitoramentoEscolarAPI.Services
 
 
         }   
-
 
          public async Task<(bool sucess, string message)> DeletarUsuario(Guid id)
          {
@@ -85,6 +88,6 @@ namespace MonitoramentoEscolarAPI.Services
             return (true, "Usuário removido com sucesso.");
          }
 
-     
+      
     }
 }

@@ -35,6 +35,17 @@ namespace MonitoramentoEscolarAPI.Controllers
             return Ok(usuario);
         }
 
+        [HttpGet("buscarUsuario")]
+        [Authorize]
+        public async Task<IActionResult> BuscarUsuarioPorEmail(string email)
+        {
+            var usuario = await _auth.BuscarUsuarioPorEmail(email);
+            if (usuario == null)
+                return NotFound(new { message = "Usuário não encontrado." });
+
+            return Ok(usuario);
+        }
+
         [HttpPost("register")]
         [AllowAnonymous]
         public async Task<IActionResult> Create([FromBody] UsuarioRequest usuario)
@@ -48,7 +59,7 @@ namespace MonitoramentoEscolarAPI.Controllers
 
         [HttpPut("{id}")]
         [Authorize]
-        public async Task<IActionResult> AtualizarUsuario(Guid id, [FromBody] UsuarioModel usuario)
+        public async Task<IActionResult> AtualizarUsuario(Guid id, [FromBody] UsuarioUpdateRequest usuario)
         {
             var result = await _auth.AtualizarUsuario(id, usuario);
             if (!result.Sucess)

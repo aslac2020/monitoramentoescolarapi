@@ -12,14 +12,25 @@ namespace MonitoramentoEscolarAPI.Models
         [Column("nome")]
         public string Nome { get; set; } = null!;
 
+        public bool? Ativo { get; set; } = true;
+
         [Column("responsavelId")]
         public Guid ResponsavelId { get; set; }
+
+        public UsuarioModel? Responsavel { get; set; }
+
+        public Guid? EscolaId { get; set; }
+        public EscolaModel? Escola { get; set; }
+
+        public Guid? SerieId { get; set; }
+        public SerieModel? Serie { get; set; }
 
         [Column("lat")]
         public double? Lat { get; set; }
 
         [Column("lon")]
-        public double? Lon { get; set;}
+        public double? Lon { get; set; }
+
 
 
     }
